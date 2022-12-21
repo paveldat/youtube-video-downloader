@@ -14,7 +14,7 @@ from enum import IntEnum
 from pytube import YouTube
 
 
-class DownloaderStatus:
+class DownloaderStatus(IntEnum):
     SUCCESS = 0
     FAILED = 130
 
@@ -81,10 +81,10 @@ class YoutubeDownloader:
                 timeout=timeout,
                 max_retries=max_retries)
             print('\033[1;91m Downloading completed. \033[1;m')
-            return DownloaderStatus.SUCCESS
+            return DownloaderStatus.SUCCESS.value
         except Exception as ex:
             print(f'\033[1;91m Exception has occured: {str(ex)} \033[1;m')
-            return DownloaderStatus.FAILED
+            return DownloaderStatus.FAILED.value
 
 
 def main():

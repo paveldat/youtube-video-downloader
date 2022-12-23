@@ -19,7 +19,7 @@
 usage: youtube_downloader.py [-h] [-o output_path] [-f filename] [-p filename_prefix] [-s] [-t timeout] [-m max_retries] url
 
 positional arguments:
-  url                   URL to the video.
+  url                   URL to the video
 
 options:
   -h, --help            show this help message and exit
